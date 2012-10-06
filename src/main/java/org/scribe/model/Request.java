@@ -148,6 +148,15 @@ class Request
   }
 
   /**
+   * Add body Parameters from a map (for POST/ PUT Requests)
+   * 
+   * @param parameterMap the parameter map
+   */
+  public void addBodyParameters(Map<String,String> parameterMap) {
+    this.bodyParams.addAll(new ParameterList(parameterMap));
+  }
+
+  /**
    * Add a QueryString parameter
    *
    * @param key the parameter name
@@ -158,6 +167,13 @@ class Request
     this.querystringParams.add(key, value);
   }
 
+  /**
+   * Add multiple QueryString parameters
+   * @param parameterMap
+   */
+  public void addQuerystringParameters(Map<String,String> parameterMap) {
+    this.querystringParams.addAll(new ParameterList(parameterMap));
+  }
   /**
    * Add body payload.
    * 

@@ -22,4 +22,16 @@ public interface Api
    * @return fully configured {@link OAuthService}
    */
   OAuthService createService(OAuthConfig config);
+  
+  /**
+   * Http Method used for getting the access token
+   * @return
+   */
+  Verb getAccessTokenVerb();
+  
+  /**
+   * The url which needs to be accessed to get the access token
+   * @return
+   */
+  String getAccessTokenEndpoint();
 }

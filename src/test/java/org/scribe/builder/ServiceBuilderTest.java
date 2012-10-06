@@ -69,5 +69,16 @@ public class ServiceBuilderTest
       ApiMock.config = config;
       return null;
     }
+
+    public Verb getAccessTokenVerb()
+    {
+      return null;
+    }
+
+    public String getAccessTokenEndpoint()
+    {
+      return null;
+    }
+
   }
 }
